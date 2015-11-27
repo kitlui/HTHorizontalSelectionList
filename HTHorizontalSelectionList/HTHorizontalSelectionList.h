@@ -23,6 +23,12 @@ typedef NS_ENUM(NSInteger, HTHorizontalSelectionIndicatorAnimationMode) {
     HTHorizontalSelectionIndicatorAnimationModeNoBounce
 };
 
+typedef NS_ENUM(NSInteger, HTHorizontalState) {
+    HTHorizontalStateHead,
+    HTHorizontalStateNormal,
+    HTHorizontalStateTale
+};
+
 @interface HTHorizontalSelectionList : UIView
 
 /**
@@ -70,6 +76,8 @@ typedef NS_ENUM(NSInteger, HTHorizontalSelectionIndicatorAnimationMode) {
 
 - (void)setSelectedButtonIndex:(NSInteger)selectedButtonIndex animated:(BOOL)animated;
 
+- (HTHorizontalState)getHorizontalState;
+
 // Deprecations
 
 @property (nonatomic) BOOL autocorrectCentralItemSelection __attribute__((deprecated("Use snapToCenter instead.")));
@@ -89,5 +97,6 @@ typedef NS_ENUM(NSInteger, HTHorizontalSelectionIndicatorAnimationMode) {
 @protocol HTHorizontalSelectionListDelegate <NSObject>
 
 - (void)selectionList:(HTHorizontalSelectionList *)selectionList didSelectButtonWithIndex:(NSInteger)index;
+- (void)selectionList:(HTHorizontalSelectionList *)selectionList scrollState:(HTHorizontalState)state;
 
 @end

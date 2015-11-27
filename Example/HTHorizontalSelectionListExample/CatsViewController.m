@@ -114,6 +114,16 @@
     self.selectedSpaceCatView.backgroundColor = [UIColor colorWithPatternImage:selectedImage];
 }
 
+- (void)selectionList:(HTHorizontalSelectionList *)selectionList scrollState:(HTHorizontalState)state {
+    if (state == HTHorizontalStateHead) {
+        NSLog(@"head");
+    } else if (state == HTHorizontalStateTale) {
+        NSLog(@"tale");
+    } else {
+        NSLog(@"mid");
+    }
+}
+
 #pragma mark - Action Handlers
 
 - (void)filterToggleButtonTapped:(id)sender {

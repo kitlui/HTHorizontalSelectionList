@@ -82,6 +82,18 @@
     self.textSelectionList.snapToCenter = YES;
 }
 
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    HTHorizontalState state = [self.textSelectionList getHorizontalState];
+    if (state == HTHorizontalStateHead) {
+        NSLog(@"head");
+    } else if (state == HTHorizontalStateTale) {
+        NSLog(@"tale");
+    } else {
+        NSLog(@"mid");
+    }
+}
+
 #pragma mark - HTHorizontalSelectionListDataSource Protocol Methods
 
 - (NSInteger)numberOfItemsInSelectionList:(HTHorizontalSelectionList *)selectionList {
@@ -97,6 +109,16 @@
 - (void)selectionList:(HTHorizontalSelectionList *)selectionList didSelectButtonWithIndex:(NSInteger)index {
     // update the view for the corresponding index
     self.selectedCarLabel.text = self.carMakes[index];
+}
+
+- (void)selectionList:(HTHorizontalSelectionList *)selectionList scrollState:(HTHorizontalState)state {
+    if (state == HTHorizontalStateHead) {
+        NSLog(@"head");
+    } else if (state == HTHorizontalStateTale) {
+        NSLog(@"tale");
+    } else {
+        NSLog(@"mid");
+    }
 }
 
 @end

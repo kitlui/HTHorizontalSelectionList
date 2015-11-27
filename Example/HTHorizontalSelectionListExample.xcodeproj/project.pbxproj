@@ -13,7 +13,6 @@
 		036F054719C624D9000D2EEB /* CarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036F054619C624D9000D2EEB /* CarsViewController.m */; };
 		036F054C19C624D9000D2EEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036F054B19C624D9000D2EEB /* Images.xcassets */; };
 		036F054F19C624D9000D2EEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036F054D19C624D9000D2EEB /* LaunchScreen.xib */; };
-		038ABFA51AC3A39100EC3ABC /* FlowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038ABFA41AC3A39100EC3ABC /* FlowersViewController.swift */; };
 		03FCAF8F1A8424A1004857A7 /* spacecat4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 03FCAF8B1A8424A1004857A7 /* spacecat4.jpeg */; };
 		03FCAF901A8424A1004857A7 /* spacecat3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 03FCAF8C1A8424A1004857A7 /* spacecat3.jpeg */; };
 		03FCAF911A8424A1004857A7 /* spacecat2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 03FCAF8D1A8424A1004857A7 /* spacecat2.jpeg */; };
@@ -42,7 +41,6 @@
 		036F054B19C624D9000D2EEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		036F054E19C624D9000D2EEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		038ABFA31AC3A39100EC3ABC /* HTHorizontalSelectionListExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HTHorizontalSelectionListExample-Bridging-Header.h"; sourceTree = "<group>"; };
-		038ABFA41AC3A39100EC3ABC /* FlowersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowersViewController.swift; sourceTree = "<group>"; };
 		03FCAF8B1A8424A1004857A7 /* spacecat4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spacecat4.jpeg; path = Resources/spacecat4.jpeg; sourceTree = "<group>"; };
 		03FCAF8C1A8424A1004857A7 /* spacecat3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spacecat3.jpeg; path = Resources/spacecat3.jpeg; sourceTree = "<group>"; };
 		03FCAF8D1A8424A1004857A7 /* spacecat2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spacecat2.jpeg; path = Resources/spacecat2.jpeg; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				036F054619C624D9000D2EEB /* CarsViewController.m */,
 				03FCAF931A842B1B004857A7 /* CatsViewController.h */,
 				03FCAF941A842B1B004857A7 /* CatsViewController.m */,
-				038ABFA41AC3A39100EC3ABC /* FlowersViewController.swift */,
 				038ABFA31AC3A39100EC3ABC /* HTHorizontalSelectionListExample-Bridging-Header.h */,
 				036F054B19C624D9000D2EEB /* Images.xcassets */,
 				036F054D19C624D9000D2EEB /* LaunchScreen.xib */,
@@ -280,7 +277,6 @@
 				036F054719C624D9000D2EEB /* CarsViewController.m in Sources */,
 				03FCAF951A842B1B004857A7 /* CatsViewController.m in Sources */,
 				036F054419C624D9000D2EEB /* AppDelegate.m in Sources */,
-				038ABFA51AC3A39100EC3ABC /* FlowersViewController.swift in Sources */,
 				036F054119C624D9000D2EEB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

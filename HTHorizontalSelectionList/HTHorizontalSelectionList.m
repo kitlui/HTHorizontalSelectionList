@@ -106,6 +106,7 @@ static NSString *ViewCellIdentifier = @"ViewCell";
                          context:NULL];
 
     _contentView = [[UIScrollView alloc] init];
+    _contentView.delegate = self;
     _contentView.userInteractionEnabled = NO;
     _contentView.scrollsToTop = NO;
     _contentView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -411,6 +412,15 @@ static NSString *ViewCellIdentifier = @"ViewCell";
                      completion:nil];
 }
 
+- (HTHorizontalState)getHorizontalState {
+    if((int)_contentView.contentOffset.x == 0)
+        return HTHorizontalStateHead;
+    else if((int)_contentView.contentOffset.x == (int)_contentView.contentSize.width-(int)_contentView.bounds.size.width)
+        return HTHorizontalStateTale;
+    else
+        return HTHorizontalStateNormal;
+}
+
 #pragma mark - UICollectionViewDataSource Protocol Methods
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -650,6 +660,8 @@ static NSString *ViewCellIdentifier = @"ViewCell";
                 }
             }
         }
+    } else if (scrollView == _contentView) {
+        [self.delegate selectionList:self scrollState:[self getHorizontalState]];
     }
 }
 
@@ -676,11 +688,13 @@ static NSString *ViewCellIdentifier = @"ViewCell";
 }
 
 - (void)correctSelection:(UIScrollView *)scrollView {
+    /*
     CGPoint centerPoint = CGPointMake(self.collectionView.frame.size.width / 2 + scrollView.contentOffset.x, self.collectionView.frame.size.height /2 + scrollView.contentOffset.y);
 
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:centerPoint];
 
     [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    */
 }
 
 #pragma mark - NSKeyValueObserving
