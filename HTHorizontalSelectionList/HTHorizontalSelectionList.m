@@ -413,9 +413,9 @@ static NSString *ViewCellIdentifier = @"ViewCell";
 }
 
 - (HTHorizontalState)getHorizontalState {
-    if((int)_contentView.contentOffset.x == 0)
+    if((int)_contentView.contentOffset.x <= 0)
         return HTHorizontalStateHead;
-    else if((int)_contentView.contentOffset.x == (int)_contentView.contentSize.width-(int)_contentView.bounds.size.width)
+    else if((int)_contentView.contentOffset.x >= (int)_contentView.contentSize.width-(int)_contentView.bounds.size.width)
         return HTHorizontalStateTale;
     else
         return HTHorizontalStateNormal;
